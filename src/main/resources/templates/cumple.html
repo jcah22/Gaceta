@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>D'Villalpando | Cumpleaños</title>
+
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" type="image/png" th:href="@{/img/favicon.ico}" />
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/arriba.js}"></script>
+</head>
+
+<body>
+	<!-- flecha ir arriba   -->
+	<div class="up">
+		<span class="fa fa-3x fa-arrow-circle-up"></span>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container">
+			<a th:href="@{/}" class="logo"> <img src="img/logo.svg" alt="Logo del sitio" width="150px">
+			</a>
+
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<ul class="navbar-nav ml-auto">
+
+					<li class="nav-item "><a class=" nav-link font-italic h6" th:href="@{/}">Inicio</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/nosotros}">Nosotros</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/directorio}">Directorio </a>
+					</li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/premio}">Avisos</a></li>
+					<!--
+					<li class="nav-item active"><a class="nav-link font-italic h6" th:href="@{/cumple}">Cumpleaños</a>
+					</li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/aniversarios}">Aniversarios</a>
+					</li>
+					-->
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+	<!-- carrusel de imagenes del encabezado -->
+	<section th:insert="fragments/carrusel :: mi-carrusel"></section>
+
+	<!--
+	<br>
+	<div class="home-area">
+		<div class="container-fluid">
+
+			<h1 class="text-center font-italic text-primary" th:text="${titulo}"></h1>
+
+			<div class="card-deck">
+				<div class="card text-white bg-dark ">
+					<img src="/img/102880.jpg" class="card-img-top img-fluid " alt="...">
+					<div class="card-body">
+						<h6 class="card-title text-center">Vargas Cuevas Reyna
+							Elizabeth</h6>
+						<p class="card-text text-center h4">15 de Marzo</p>
+						<p class="card-text text-center">Departamentales</p>
+					</div>
+				</div>
+				<div class="card text-white bg-dark ">
+					<img src="/img/205253.jpg" class="card-img-top img-fluid  rounded" alt="...">
+					<div class="card-body">
+						<h5 class="card-title text-center">Zuart Juares Ivan Patricio</h5>
+
+						<p class="card-text text-center h4">17 de Marzo</p>
+						<p class="card-text text-center">Distribución</p>
+					</div>
+				</div>
+
+				<div class="card text-white bg-dark ">
+					<img src="/img/102830.jpg" class="card-img-top img-fluid rounded" alt="...">
+					<div class="card-body">
+						<h6 class="card-title text-center">Laureano Polo Anayely</h6>
+						<p class="card-text text-center h4">18 de Marzo</p>
+						<p class="card-text text-center">Pulido</p>
+
+
+					</div>
+				</div>
+				<div class="card text-white bg-dark ">
+					<img src="/img/nonato.jpg" class="card-img-top img-fluid rounded" alt="...">
+					<div class="card-body">
+						<h5 class="card-title text-center">Nonato Sanchez Gloria</h5>
+						<p class="card-text text-center h4">18 de Marzo</p>
+						<p class="card-text text-center">Diamantado</p>
+					</div>
+				</div>
+
+			</div>
+			<h1
+				class="text-center font-italic  border-top-0  border-bottom border-right-0 border-left-0 mt-4  border border-secondary">
+			</h1>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	-->
+
+	<!-- fragment de pie de pagina  -->
+	<footer th:insert="fragments/footer :: pie-pagina"></footer>
+
+
+
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+
+
+</body>
+
+</html>

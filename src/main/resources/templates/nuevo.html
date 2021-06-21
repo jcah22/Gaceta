@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>D'Villalpando | Inicio</title>
+
+
+	<link rel="stylesheet" th:href="@{/css/estilos.css}">
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div></div>
+
+	<div class="container mt-4">
+		<div class="card-new bg-light">
+			<div class="card-header bg-dark text-white" th:text="${titulo}"></div>
+			<div class="card-body">
+
+
+
+				<form th:action="@{/save}" th:object="${usuario}" method="post" enctype="multipart/form-data">
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">ID </label> <input type="text" th:field="*{id_usuario}"
+							class="form-control form-control-sm col-md-6" id="nombre" placeholder="id de usuario">
+						<small></small>
+					</div>
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Nombres: </label> <input type="text" th:field="*{nombre}"
+							class="form-control form-control-sm col-md-6" id="nombre" placeholder="nombre">
+						<small></small>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Apellido Paterno: </label> <input type="text"
+							th:field="*{apellido_paterno}" class="form-control form-control-sm col-md-6" id="apaterno"
+							placeholder="Apellido Paterno"> <small></small>
+					</div>
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Apellido Materno: </label> <input type="text"
+							th:field="*{apellido_materno}" class="form-control form-control-sm col-md-6" id="amaterno"
+							placeholder="Apellido Materno"> <small></small>
+					</div>
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Correo: </label> <input type="email" th:field="*{correo}"
+							class="form-control form-control-sm col-md-6" id="correo" placeholder="correo">
+						<small></small>
+					</div>
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Telefono: </label> <input type="text"
+							th:field="*{telefono}" class="form-control form-control-sm col-md-6" id="telefono"
+							placeholder="Telefono"> <small></small>
+					</div>
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Extension: </label> <input type="text"
+							th:field="*{extension}" class="form-control form-control-sm col-md-6" id="extension"
+							placeholder="extension"> <small></small>
+					</div>
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Fecha de Ingreso: </label> <input type="date"
+							th:field="*{fecha_ingreso}" class="form-control form-control-sm col-md-6" id="ingreso"
+							placeholder="fecha de ingreso YYYY-MM-DD"> <small></small>
+					</div>
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Fecha de Nacimiento:
+						</label> <input type="date" th:field="*{fecha_nacimiento}"
+							class="form-control form-control-sm col-md-6" id="nacimiento"
+							placeholder="fecha de nacimiento YYYY-MM-DD"> <small></small>
+					</div>
+					<div class="form-group row">
+						<label class="col-md-2" for="nombre">Area: </label> <select th:field="*{area}"
+							class="form-control form-control-sm col-md-6" id="area">
+							<option th:each="a:${areas}" th:value="${a.id_area}" th:text="${a.nombre_area}" />
+
+						</select>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-md-2" for="file">Foto</label> <input type="file" name="file"
+							class="form-control form-control-sm col-md-6" />
+						<!-- th:field="*{foto}" -->
+					</div>
+
+					<div class="card-footer bg-dark rounded ">
+
+						<input type="submit" class="btn btn-primary btn-md " id="telefono" value="Guardar" />
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+</body>
+
+</html>

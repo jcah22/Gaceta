@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>D'Villalpando | Directorio</title>
+
+
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<link rel="shortcut icon" type="image/png" th:href="@{/img/favicon.ico}" />
+	<script type="text/javascript" th:src="@{/js/arriba.js}"></script>
+</head>
+
+<body>
+
+	<!-- flecha ir arriba   -->
+	<div class="up">
+		<span class="fa fa-3x fa-arrow-circle-up"></span>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container">
+			<a th:href="@{/}" class="logo"> <img src="img/logo.svg" alt="Logo del sitio" width="150px"></a>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<ul class="navbar-nav ml-auto">
+
+
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/}">Inicio</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/nosotros}">Nosotros</a></li>
+					<li class="nav-item active"><a class="nav-link font-italic h6"
+							th:href="@{/directorio}">Directorio</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/premio}">Avisos</a></li>
+					<!--
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/cumple}">Cumpleaños </a></li>
+					<li class="nav-item"><a class="nav-link font-italic h6" th:href="@{/aniversarios}">Aniversarios</a>
+					</li>
+					-->
+
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	<!-- carrusel de imagenes del encabezado -->
+	<section th:insert="fragments/carrusel :: mi-carrusel"></section>
+
+
+	<br>
+	<!--
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control"
+                    placeholder="Buscar por Nombre" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button"
+                        id="button-addon2">Button</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 offset-md-4">
+            <div class="dropdown">
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"> Buscar por Area </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Sistemas</a> <a
+                        class="dropdown-item" href="#">Contabilbidad</a> <a
+                        class="dropdown-item" href="#">Recursos Humamos</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+
+
+    <div class="row text-center">
+
+        <div class="col-sm-6  col-md-6 col-lg-6 offset-md-3 ">
+            <div class="input-group mb-3 ">
+                <input type="text" class="form-control"
+                       placeholder="Buscar  por Nombre" aria-label="Recipient's username"
+                       aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="button"
+                            id="button-addon2">Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+-->
+
+	<div class="container-fluid mt-2">
+
+
+		<div class="row row-cols-1 row-cols-lg-4 text-justify">
+			<div class="col mb-4" th:each=" u: ${usuarios}">
+
+				<div class="card border-dark bg-light text-center rounded ">
+
+					<img class="img-card img-fluid rounded" th:alt="${u.foto}" th:src="@{'/uploads/' + ${u.foto}}">
+					<div>
+						<i class="fa fa-user"></i> <label class="font-weight-bold font-italic"
+							th:text="${u.nombre}+ ' ' + ${u.apellido_paterno} + ' ' + ${u.apellido_materno}"></label>
+					</div>
+					<div>
+						<i class="fa fa-envelope"></i> <label class="card-title text-justify"
+							th:text="${u.correo}"></label> <br>
+						<i class="fa fa-phone" th:text="' : '"></i><label class="card-text" th:text="${u.telefono}"> </label> <br> <i
+							class="fa fa-external-link-square" aria-hidden="true"></i> <label class="card-text"
+							th:text="'Extension: '+${u.extension}"></label>
+
+					</div>
+
+					<div class="card-footer border-primary">
+						<label class="card-text font-weight-bold" th:text="${u.area.nombre_area}"></label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<hr>
+	</div>
+
+	<br>
+	<br>
+
+
+	<footer th:insert="fragments/footer :: pie-pagina"></footer>
+
+
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>D'Villalpando | Listar</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/estilos.css}">
+	<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" type="image/png" th:href="@{/img/favicon.ico}" />
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/arriba.js}"></script>
+</head>
+
+<body>
+	<!-- flecha ir arriba   -->
+	<div class="up">
+		<span class="fa fa-3x fa-arrow-circle-up"></span>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container">
+			<a th:href="@{/}" class="logo"> <img th:src="@{/img/logo.svg}" alt="Logo del sitio" width="150px">
+			</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<ul class="navbar-nav ml-auto">
+
+					<li class="nav-item active"><a class="nav-link font-italic h6" th:href="@{/}">Inicio</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/nosotros}">Nosotros</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/directorio}">Directorio </a>
+					</li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/premio}">Avisos </a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/cumple}">Cumpleaños </a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/aniversarios}">Aniversarios</a>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<h1 class="text-center mt-4" th:text="${titulo}"></h1>
+
+		<a class="btn btn-primary btn-md" th:href="@{/crear}" th:text="'Nuevo Usuario'" title="Crear Nuevo Usuario">
+		</a>
+		<br>
+		<br>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">NOMBRE COMPLETO</th>
+					<th scope="col">CORREO</th>
+					<th scope="col">TELEFONO</th>
+					<th scope="col">EXTENSION</th>
+					<th scope="col">FECHA INGRESO</th>
+					<th scope="col">FECHA DE NACIMIENTO</th>
+					<th scope="col">AREA</th>
+					<th scope="col">EDITAR</th>
+					<th scope="col">ELIMINAR</th>
+
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="u:${usuarios}">
+					<th scope="row" th:text="${u.id_usuario}"></th>
+					<td th:text="${u.nombre}+' '+ ${u.apellido_paterno} +' '+ ${u.apellido_materno}"></td>
+					<td th:text="${u.correo}"></td>
+					<td th:text="${u.telefono}"></td>
+					<td th:text="${u.extension}"></td>
+					<td th:text="${u.fecha_ingreso}"></td>
+					<td th:text="${u.fecha_nacimiento}"></td>
+					<td th:text="${u.area.nombre_area}"></td>
+					<!--
+                       <td><a class="btn btn-warning btn-md"
+                              th:href="@{/editar/} + ${u.id_usuario}" th:text="'Editar'" title="Editar Usuario"></a></td>
+            -->
+					<td><a class="btn btn-warning btn-md" th:href="@{/editar/{id} (id=${u.id_usuario}) }"
+							th:text="'Editar'" title="Editar Usuario">
+
+						</a></td>
+
+
+					<!--
+                                  <td><a class="btn btn-danger btn-md"
+                                         th:href="@{/delete/} + ${u.id_usuario}" th:text="'Eliminar'"
+                                         title="Eliminar Usuario"
+                                         onclick="return confirm('Estas seguro de Eliminar el Ususario ?');"></a>
+                                  </td>
+                                   -->
+
+
+					<td><a class="btn btn-danger btn-md" th:href="@{/delete/{id} (id=${u.id_usuario}) }"
+							th:text="'Eliminar'" title="Eliminar Usuario"
+							onclick="return confirm('Estas seguro de Eliminar el Ususario ?');"></a>
+					</td>
+
+			</tbody>
+		</table>
+	</div>
+
+	<br><br>
+
+	<footer class="fixed-bottom" th:insert="fragments/footer :: pie-pagina"></footer>
+
+
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+
+</body>
+
+</html>

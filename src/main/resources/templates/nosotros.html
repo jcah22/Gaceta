@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>D'Villalpando | Nosotros</title>
+
+
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" type="image/png" th:href="@{/img/favicon.ico}" />
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/arriba.js}"></script>
+</head>
+
+<body>
+	<!-- flecha ir arriba   -->
+	<div class="up">
+		<span class="fa fa-3x fa-arrow-circle-up"></span>
+	</div>
+	<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container">
+			<a th:href="@{/}" class="logo"> <img src="img/logo.svg" alt="Logo del sitio" width="150px"></a>
+
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<ul class="navbar-nav ml-auto">
+
+
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/}">Inicio</a></li>
+					<li class="nav-item active"><a class="nav-link font-italic h6" th:href="@{/nosotros}">Nosotros</a>
+					</li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/directorio}">Directorio </a>
+					</li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/premio}">Avisos</a></li>
+					<!--
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/cumple}">Cumpleaños</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6"
+							th:href="@{/aniversarios}">Aniversarios</a></li>
+							-->
+
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	<!-- carrusel de imagenes del encabezado -->
+	<section th:insert="fragments/carrusel :: mi-carrusel"></section>
+
+
+	<!-- *********************************************************************************** -->
+
+	<div class="container text-center mt-4 font-italic">
+		<h2 class="border-top-0  border-bottom border-right-0 border-left-0 mt-5  border border-primary" id="nosotros">
+			Acerca de Nosotros</h2>
+
+	</div>
+
+	<div class="container text-justify mt-4">
+		<div class="row">
+			<article class="col-md-8">
+
+				<div id="accordion" role="tablist" aria-multiselectable="true">
+
+					<div class="panel panel-default ">
+
+						<h4 class="panel-heading">
+							<a data-toggle="collapse" data-parent="#accordion" href="#tab-mision">Historia </a>
+
+						</h4>
+						<div id="tab-mision" class="panel-collapse collapse in">
+							<p class="font-italic ">
+								<span class="dvilla"> Grupo de D´Villalpando </span> es una empresa mexicana altamente
+								reconocida por su tradición y excelencia
+								, cuenta con mas de 500 colaboradores y maquinaria de vangurdia, con el unico objetivo
+								que
+								es </b><span class="text-success"><b>"la mejora continua"</b></span>.
+							</p>
+							<p class="font-italic ">Tenemos en el mercado en el mercado 39 años, que se han logrado
+								através
+								del esfuerzo y dedicación de cada uno
+								de los integrantes. Esto nos ha permitido adquirir la experiencia necesaria para
+								expandir
+								nuestra linea de productos,
+								ya que en nuestros inicios la cadena de oro y plata fue la punta de lanza para
+								cristalizar
+								lo que hoy en dia somos.
+
+							</p>
+							<p class="font-italic ">
+								Contamos con argollas matrimoniales bajo la marca de Enamoro que se distribuye en
+								tiendas
+								departamentales de mayor prestigio,
+								arracadas, dijes ,esclavas , pulseras,medallas, entre otras.
+								Toda esta diversidad esta acompañada del diseño y tecnologia en su fabricacion.
+							</p>
+							<p class="font-italic ">
+								Contamos con 10 sucursales en el interior de la Republica Mexicana y 2 en el area
+								Metropolitana. Exportamos a paises de Centroamerica, Sudamerica y Europa.
+							</p>
+							<p>
+
+							</p>
+
+						</div>
+					</div>
+
+
+					<div class="panel panel-default ">
+						<h4 class="panel-heading">
+
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+								href="#tab-vision">Filosofia</a>
+
+						</h4>
+						<div id="tab-vision" class="panel-collapse collapse">
+							<p class="font-italic">La busqueda de la excelencia, la
+								integridad moral y el esfuerzo sostenido. elementos que conducen
+								invariablemente por el camino de la calidad.</p>
+
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<h4 class="panel-heading">
+
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#tab-valores">
+								Misión </a>
+
+						</h4>
+						<div id="tab-valores" class="panel-collapse collapse">
+							<p class="font-italic ">
+								Ser una institución de mejora continua, tanto en la satisfacción de sus clientes , Como
+								el
+								desarrollo
+								integral de su personal , adaptando sistemas y tecnologia de vanguardia en cada uno de
+								sus
+								procesos.
+
+							</p>
+							<p class="font-italic ">
+								Nos hemos regido bajo cuatro principios que han guiado nuestro camino <b>"TECNOLOGIA ,
+									DISEÑO , CALIDAD Y
+									COLABORACIÓN"</b> , por que sabemos que existe competencia pero ésta es y será con
+								nosotros
+								mismos.
+							</p>
+
+
+						</div>
+					</div>
+				</div>
+
+			</article>
+			<aside class="col-md-4">
+				<img class="img-fluid rounded" src="img/trompo.jpg" alt="Nosotros" width="500px">
+
+
+			</aside>
+
+
+		</div>
+	</div>
+
+	<div class="container mb-5 ">
+		<hr>
+	</div>
+	<br>
+	<br>
+	<br>
+
+
+	<footer th:insert="fragments/footer :: pie-pagina"></footer>
+
+
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+</body>
+
+</html>

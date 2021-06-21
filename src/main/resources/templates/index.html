@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>D'Villalpando | Inicio</title>
+
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/estilos.css}">
+
+	<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" type="image/png" th:href="@{/img/favicon.ico}" />
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js
+    "></script>
+
+	<!--	<script th:src="@{/js/jquery-3.3.1.min.js}"></script> -->
+	<script type="text/javascript" th:src="@{/js/arriba.js}"></script>
+
+
+
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container">
+			<a th:href="@{/}" class="logo"> <img th:src="@{/img/logo.svg}" alt="Logo del sitio" width="150px">
+			</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<ul class="navbar-nav ml-auto">
+
+					<li class="nav-item active"><a class="nav-link font-italic h6" th:href="@{/}">Inicio</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/nosotros}">Nosotros</a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/directorio}">Directorio </a>
+					</li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/premio}">Avisos </a></li>
+					<!--
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/cumple}">Cumpleaños </a></li>
+					<li class="nav-item "><a class="nav-link font-italic h6" th:href="@{/aniversarios}">Aniversarios</a>
+					</li>
+						-->
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- carrusel de imagenes del encabezado -->
+	<section th:insert="fragments/carrusel :: mi-carrusel"></section>
+
+	<div class="container-fluid">
+
+		<!-- flecha ir arriba   -->
+		<div class="up">
+			<span class="fa fa-3x fa-arrow-circle-up"></span>
+		</div>
+
+
+
+		<h1 class="text-center text-danger font-weight-bolder">Importante</h1>
+		<video class="col-lg-12  w-100" height="500px" controls>
+
+			<source th:src="@{/video/DV.mp4}" type="video/mp4">
+		</video>
+	</div>
+
+	<diV class="container">
+
+		<h1
+			class="text-center font-italic text-success border-top-0  border-bottom border-right-0 border-left-0 mt-5  border border-success">
+			Recomendaciones</h1>
+
+
+		<div class="row align-items-center text-center">
+			<div class="col">
+				<img th:src="@{/img/1c.png}" class="img-fluid" alt="">
+				<p>Lavado de manos durante al menos 20 segundos con agua y
+					jabón, en caso de no contar con agua y jabón se pueden usar
+					soluciones alcoholadas al 60%.</p>
+			</div>
+			<div class="col">
+				<img th:src="@{/img/2c.png}" class="img-fluid" alt="">
+				<p>Limpiar (con agua y jabón) y desinfectar (con una solución
+					clorada) las superficies y objetos de uso común.</p>
+			</div>
+			<div class="col">
+				<img th:src="@{/img/3c.png}" class="img-fluid" alt="">
+				<p>Mantener una sana distancia entre personas (de 1.5 metros a 2
+					metros), en caso de no poder mantener esta distancia usar
+					cubreboca, por ejemplo en el transporte público.</p>
+
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-4 text-center text-center">
+				<img th:src="@{/img/4c.png}" class="img-fluid" alt="">
+				<p>Etiqueta respiratoria (cubrir nariz y boca con el ángulo
+					interno del codo o con un pañuelo desechable).</p>
+			</div>
+			<div class="col-4 text-center">
+
+				<img th:src="@{/img/5c.png}" class="img-fluid" alt="">
+				<p>En caso de presentar síntomas compatibles y no formar parte
+					de un grupo vulnerable ni tener indicios de dificultad
+					respiratoria, recuperarse en casa.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- #################################  EFEMERIDES DEL MES###################################################### -->
+
+	<div class="container">
+		<h1
+			class="text-center font-italic text-primary border-top-0  border-bottom border-right-0 border-left-0 mt-5  border border-primary">
+			Efemerides
+			Junio</h1>
+
+		<div class="row">
+			<div class="col-sm-7">
+				<img th:src="@{/img/marina.jpg}" class="img-fluid" alt="">
+			</div>
+			<div class="col-sm-5">
+				<p>
+					<br>
+					<b>1 de Junio</b>Día de la Marina, este día fue determinado por el hecho de que en 1917 zarpó del
+					puerto de Veracruz, por primera vez un buque mercante mexicano, el vapor “Tabasco”, con el total de
+					la tripulación compuesta exclusivamente por mexicanos de nacimiento y teniendo como capitán al a Don
+					Rafael Izaguirre Castañares <br><br>
+					La primera ocasión en que se celebró el Día de la Marina fue el 1° de junio de 1942, que sirvió
+					además, para homenajear a las tripulaciones de los buques tanques mexicanos “Potrero del Llano” y
+					“Faja de Oro” que fueron torpedeados y hundidos por submarinos alemanes los días 13 y 20 de mayo de
+					ese mismo año durante el desarrollo de la segunda guerra mundial, acciones donde dejaron la vida
+					muchos marinos mexicanos.
+				</p>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<div class="col-sm-5">
+				<img th:src="@{/img/ambiente.jpg}" class="img-fluid" alt="">
+			</div>
+			<div class="col-sm-7">
+				<p>
+					<br>
+					<b>5 de Junio</b>El Día Mundial del Ambiente fue establecido por la Organización de las Naciones
+					Unidas (ONU) en su resolución, el 15 de diciembre de 1977.Se celebra desde 1974 el 5 de junio de
+					cada año, fecha con la que se dio inicio a la Conferencia de Estocolmo en 1972, cuyo tema central
+					fue el Ambiente1​ y dos días después del día del ambiente la Asamblea General de la ONU también
+					aprobó la creación del Programa de las Naciones Unidas para el Medio Ambiente <br><br>
+				</p>
+			</div>
+		</div>
+
+	</div>
+	<br>
+
+	<div class="container">
+		<h2
+			class="text-center font-italic text-dark border-top-0  border-bottom border-right-0 border-left-0 mt-5  border border-dark font-weight-bold">
+			Nuevos
+			Ingresos</h2>
+
+		<div id="ingresos" class="wrapper row align-items-center text-center ">
+
+			<div class="single-team">
+				<div class="box img1"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Oscar Hernandez Mandujano</h4>
+						<hr>
+
+						<h5>Auxiliar Contable</h5>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="single-team">
+				<div class="box img2"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Janet Gonzalez Ramirez</h4>
+						<hr>
+
+						<h5>Analista de Compras</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="single-team">
+				<div class="box img3"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Ricardo Alberto Navarrete</h4>
+						<hr>
+
+						<h5>Auxiliar de Distribucion</h5>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!--segunda seccion de nuevos ingresos-->
+	<div class="container">
+
+
+		<div id="ingresos" class="wrapper row align-items-center text-center ">
+
+			<div class="single-team">
+				<div class="box img4"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Dulce Rios Garcia</h4>
+						<hr>
+
+						<h5>Auxiliar Distribución</h5>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="single-team">
+				<div class="box img5"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Juan Jose García</h4>
+						<hr>
+
+						<h5>Auxiliar Distribución</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="single-team">
+				<div class="box img6"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Rolando Nolasco</h4>
+						<hr>
+
+						<h5>Seguridad Patrimonial</h5>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!--tercera seccion  -->
+	<div class="container">
+
+
+		<div id="ingresos" class="wrapper row align-items-center text-center ">
+
+			<div class="single-team">
+				<div class="box img7"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Juan Carlos Barrera</h4>
+						<hr>
+
+						<h5>Seguridad Patrimonial</h5>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="single-team">
+				<div class="box img8"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Sergio Guerra</h4>
+						<hr>
+
+						<h5>Chofer</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="single-team">
+				<div class="box img9"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Guadalupe Chavez</h4>
+						<hr>
+
+						<h5>Auxiliar de Limpieza</h5>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="single-team">
+				<div class="box img10"></div>
+				<div class="box img-text">
+					<div class="text-area text-center">
+						<h4>Maria de los Angeles Resendiz</h4>
+						<hr>
+
+						<h5>Auxiliar de Limpieza</h5>
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<footer th:insert="fragments/footer :: pie-pagina"></footer>
+
+
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+</body>
+
+</html>
