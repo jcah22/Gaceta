@@ -120,8 +120,19 @@
 							th:text="${u.nombre}+ ' ' + ${u.apellido_paterno} + ' ' + ${u.apellido_materno}"></label>
 					</div>
 					<div>
+
+						<!--
+
 						<i class="fa fa-envelope"></i> <label class="card-title text-justify"
-							th:text="${u.correo}"></label> <br>
+							th:text="${u.correo}"></label>
+
+						-->
+
+						<i class="fa fa-envelope"></i> <label class="card-title text-justify" ><a th:href="@{mailto:{to}(to=${u.correo})}" th:text="${u.correo}" ></a> </label>
+
+
+						<br>
+
 						<i class="fa fa-phone" th:text="' : '"></i><label class="card-text" th:text="${u.telefono}"> </label> <br> <i
 							class="fa fa-external-link-square" aria-hidden="true"></i> <label class="card-text"
 							th:text="'Extension: '+${u.extension}"></label>
