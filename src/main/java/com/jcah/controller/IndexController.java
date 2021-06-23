@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -166,18 +167,38 @@ public class IndexController {
 	}
 
 	@GetMapping("/editar/{id}")
-	public String editar(@PathVariable("id") Long idUsuario, Model model) {
+	public String editar(@RequestBody Usuario u, @PathVariable("id") Long idUsuario, Model model) {
 
 		Usuario usuario = usuarioService.buscarPorId(idUsuario);
 
-		List<Area> listareas = areaService.listaAreas();
+		//List<Area> listareas = areaService.listaAreas();
+		
+		usuario.setId_usuario(idUsuario);
+		usuario.setNombre(u.getNombre());
+		usuario.setApellido_materno(u.getApellido_materno());
+		usuario.setApellido_paterno(u.getApellido_paterno());
+		usuario.setApellido_materno(u.getApellido_materno());
+		usuario.setCorreo(u.getCorreo());
+		usuario.setTelefono(u.getTelefono());
+		usuario.setExtension(u.getExtension());
+		usuario.setFecha_ingreso(u.getFecha_ingreso());
+		usuario.setFecha_nacimiento(u.getFecha_nacimiento());
+		usuario.setArea(u.getArea());
+		usuario.setFoto(u.getFoto());
+		
+		usuarioService.guardar(usuario);
+		
+		
+		
+		
 
 		model.addAttribute("titulo", "Editar Usuario");
 		model.addAttribute("usuario", usuario);
-		model.addAttribute("areas", listareas);
+		//model.addAttribute("areas", listareas);
 		return "/nuevo";
 	}
 
+	
 	@GetMapping("/delete/{id}")
 	public String eliminar(@PathVariable("id") Long idUsuario) {
 
