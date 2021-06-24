@@ -171,7 +171,7 @@ public class IndexController {
 
 		Usuario usuario = usuarioService.buscarPorId(idUsuario);
 
-		//List<Area> listareas = areaService.listaAreas();
+		List<Area> listareas = areaService.listaAreas();
 		
 		usuario.setId_usuario(idUsuario);
 		usuario.setNombre(u.getNombre());
@@ -194,8 +194,8 @@ public class IndexController {
 
 		model.addAttribute("titulo", "Editar Usuario");
 		model.addAttribute("usuario", usuario);
-		//model.addAttribute("areas", listareas);
-		return "/nuevo";
+		model.addAttribute("areas", listareas);
+		return "redirect:/nuevo";
 	}
 
 	
