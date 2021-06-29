@@ -120,7 +120,7 @@
 /*imagenes de nuevos ingresos */
 
 .img1 {
-	background: url(../img/205283.png);
+	background: url(../img/omandujano.jpg);
 	border-radius: 6px;
 	display: block;
 	width: 300px;
@@ -130,7 +130,7 @@
 
 
 .img2 {
-	background: url(../img/205266.png);
+	background: url(../img/jgonzalez.jpg);
 	border-radius: 6px;
 	display: block;
 	width: 300px;
@@ -138,70 +138,17 @@
 }
 
 .img3 {
-	background: url(../img/103214.png);
+	background: url(../img/drios.jpg);
 	border-radius: 6px;
 	display: block;
 	width: 300px;
 	height: 200px;
 }
 
-.img4 {
-	background: url(../img/103158.png);
-	border-radius: 6px;
-	display: block;
-	width: 300px;
-	height: 200px;
-}
 
-.img5 {
-	background: url(../img/103220.png);
-	border-radius: 6px;
-	display: block;
-	width: 300px;
-	height: 200px;
-}
 
-.img6 {
-	background: url(../img/103216.png);
-	border-radius: 6px;
-	display: block;
-	width: 300px;
-	height: 200px;
-}
 
-.img7 {
-	background: url(../img/103217.png);
-	border-radius: 6px;
-	display: block;
-	width: 300px;
-	height: 200px;
-}
-
-.img8 {
-	background: url(../img/103223.png);
-	border-radius: 6px;
-	display: block;
-	width: 300px;
-	height: 200px;
-}
-
-.img9 {
-	background: url(../img/103221.png);
-	border-radius: 6px;
-	display: block;
-	width: 300px;
-	height: 200px;
-}
-
-.img10 {
-	background: url(../img/103218.png);
-	border-radius: 6px;
-	display: block;
-	width: 300px;
-	height: 200px;
-}
-
-.img1, .img2, .img3,.img4,.img5,.img6,.img7,.img8,.img9,.img10 {
+.img1, .img2, .img3 {
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center center;
@@ -230,27 +177,6 @@
 	transform: translateY(0);
 }
 
-.single-team:hover .img4 {
-	transform: translateY(0);
-}
-.single-team:hover .img5 {
-	transform: translateY(0);
-}
-.single-team:hover .img6 {
-	transform: translateY(0);
-}
-.single-team:hover .img7 {
-	transform: translateY(0);
-}
-.single-team:hover .img8 {
-	transform: translateY(0);
-}
-.single-team:hover .img9 {
-	transform: translateY(0);
-}
-.single-team:hover .img10 {
-	transform: translateY(0);
-}
 
 
 .img-text {
